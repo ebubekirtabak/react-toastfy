@@ -1,0 +1,332 @@
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation ($delay, $duration, $animation, $direction, $iteration) {
+        animation-name: $animation;
+     -o-animation-name: $animation;
+   -moz-animation-name: $animation;
+-webkit-animation-name: $animation;
+
+        animation-delay: $delay;
+     -o-animation-delay: $delay;
+   -moz-animation-delay: $delay;
+-webkit-animation-delay: $delay;
+
+        animation-duration: $duration;
+     -o-animation-duration: $duration;
+   -moz-animation-duration: $duration;
+-webkit-animation-duration: $duration;
+
+        animation-fill-mode: $direction;
+     -o-animation-fill-mode: $direction;
+   -moz-animation-fill-mode: $direction;
+-webkit-animation-fill-mode: $direction;
+
+        animation-direction: $direction;
+     -o-animation-direction: $direction;
+   -moz-animation-direction: $direction;
+-webkit-animation-direction: $direction;
+
+        animation-iteration-count: $iteration;
+     -o-animation-iteration-count: $iteration;
+   -moz-animation-iteration-count: $iteration;
+-webkit-animation-iteration-count: $iteration;
+}
+
+@mixin animation-name($name...) {
+          animation-name: $name;
+       -o-animation-name: $name;
+     -moz-animation-name: $name;
+  -webkit-animation-name: $name;
+}
+
+@mixin animation-duration($duration...) {
+          animation-duration: $duration;
+       -o-animation-duration: $duration;
+     -moz-animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+}
+
+@mixin animation-duration($duration...) {
+          animation-duration: $duration;
+       -o-animation-duration: $duration;
+     -moz-animation-duration: $duration;
+  -webkit-animation-duration: $duration;
+}
+
+@mixin animation-timing-function($timing...) {
+          animation-timing-function: $timing;
+       -o-animation-timing-function: $timing;
+     -moz-animation-timing-function: $timing;
+  -webkit-animation-timing-function: $timing;
+}
+
+@mixin animation-iteration-count($count...) {
+          animation-iteration-count: $count;
+       -o-animation-iteration-count: $count;
+     -moz-animation-iteration-count: $count;
+  -webkit-animation-iteration-count: $count;
+}
+
+@mixin animation-direction($direction...) {
+          animation-direction: $direction;
+       -o-animation-direction: $direction;
+     -moz-animation-direction: $direction;
+  -webkit-animation-direction: $direction;
+}
+
+@mixin animation-fill-mode($fill...) {
+          animation-fill-mode: $fill;
+       -o-animation-fill-mode: $fill;
+     -moz-animation-fill-mode: $fill;
+  -webkit-animation-fill-mode: $fill;
+}
+
+@mixin animation-play-state($state...) {
+          animation-play-state: $state;
+       -o-animation-play-state: $state;
+     -moz-animation-play-state: $state;
+  -webkit-animation-play-state: $state;
+}
+
+@mixin animation($animation...) {
+          animation: $animation;
+       -o-animation: $animation;
+     -moz-animation: $animation;
+  -webkit-animation: $animation;
+}
+
+@mixin transition($args...) {
+          transition: $args;
+       -o-transition: $args;
+      -ms-transition: $args;
+     -moz-transition: $args;
+  -webkit-transition: $args;
+}
+
+@mixin on-mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin up-mobile {
+  @media (min-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin xsmall {
+  @media (min-width: #{$xsmall-width}) and  (max-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (min-width: #{$small-width}) and  (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}) and  (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin on-small {
+  @media (max-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin up-small {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
+@mixin on-xsmall {
+  @media (max-width: #{$xsmall-width}) {
+    @content;
+  }
+}
+
+@mixin up-xsmall {
+  @media (min-width: #{$xsmall-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin up-tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (max-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin up-desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin on-large{
+  @media (max-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-width}) and (max-width: #{$xlarge-width}) {
+    @content;
+  }
+}
+
+@mixin up-large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}
+
+@mixin on-xlarge{
+  @media (max-width: #{$xlarge-width}) {
+    @content;
+  }
+}
+
+@mixin up-xlarge {
+  @media (min-width: #{$xlarge-width}) {
+    @content;
+  }
+}
+
+@mixin slideup {
+  @include animation(.1s, 1s, slideUp, normal, unset);
+}
+
+@mixin scaleup {
+  @include animation(1s, 1s, scaleUp, linear, infinite);
+}
+
+@mixin xlarge {
+  @media (min-width: #{$xlarge-width}) and (max-width: #{$fullhd-width}) {
+    @content;
+  }
+}
+
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+@mixin display-flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+@mixin display-inline-flex {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+}
+
+@mixin justify-content( $content ) {
+  -webkit-flexjustify-content: $content;
+  justify-content: $content;
+}
+
+@mixin align-items( $content ) {
+  align-items: $content;
+  -ms-align-items: $content;
+  -webkit-align-items: $content;
+}
+
+@mixin flex-direction( $content ) {
+  flex-direction: $content;
+  -ms-flex-direction: $content;
+  -webkit-flex-direction: $content;
+}
+
+@mixin flex-wrap( $content ) {
+  flex-wrap: $content;
+  -ms-flex-wrap: $content;
+  -webkit-flex-wrap: $content;
+}
+
+@mixin flex-flow( $content ) {
+  -webkit-flex-flow: $content;
+  flex-flow: $content;
+  -ms-flex-flow: $content;
+}
+
+@mixin flex( $content ) {
+  -webkit-flex: $content;
+  -ms-flex: $content;
+  flex: $content;
+}
+
+@include keyframes(scaleUp) {
+  from {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+    background-color: rgba(216,216,216,0.4);
+  }
+
+  50% {
+    transform: scale(.5);
+    background-color: rgba(216,216,216,0.1);
+  }
+
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+    background-color: rgba(216,216,216,0.4);
+  }
+}
