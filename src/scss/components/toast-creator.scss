@@ -1,4 +1,7 @@
 .toast-creator {
   @include display-flex;
-
+  @include flex-flow(column);
+  width: 100%;
+  max-width: 1280px;
+  margin-top: 20px;
 }
