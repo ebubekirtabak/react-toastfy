@@ -1,0 +1,5 @@
+.input-content {
+  margin-bottom: 10px;
+  @include display-flex;
+  @include flex-flow(column);
+}

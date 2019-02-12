@@ -1,0 +1,10 @@
+.toast-container {
+  @include display-flex;
+  width: 340px;
+  positon: absolute;
+
+  &.tr {
+    top: 75px;
+    right: 20px;
+  }
+}
