@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import SimpleToast from './toasts/SimpleToast';
-
+import { addSimpleToast } from '../store/actions';
 
 export default class Toaster extends Component {
 
@@ -24,6 +24,7 @@ export default class Toaster extends Component {
 
   componentDidMount () {
     console.log('onload');
+    addSimpleToast(' test message ');
   }
 
   appendToast() {
