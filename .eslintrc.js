@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  extends: 'airbnb',
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint",
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -19,6 +23,9 @@ module.exports = {
     'react',
   ],
   rules: {
-    "indent": ["error", "tab"]
+    "indent": ["error", "tab"],
+    "quotes": ["error", "single"],
+    'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
   },
 };
