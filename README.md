@@ -1,4 +1,23 @@
 # React Toastfy
+
+## What is Toastfy ?
+
+Toastfy is simple toast notification library.
+
+
+## Get Involved
+
+
+**Contributing**: Pull requests are welcome!
+
++ Read [CONTRIBUTING.md]() and check out our bite-sized and help-wanted issues
+
++ Submit github issues for any feature enhancements, bugs or documentation problems
+
+**Support**: 
+Questions/comments can also be posted as github issues
+
+
 ## Features
 + ES6 and greater => ES5 code transpiling (with Babel)
 + Styling with SASS
