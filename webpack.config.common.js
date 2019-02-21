@@ -12,19 +12,11 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    modules: ['node_modules', './src'],
-    extensions: ['.js', '.jsx'],
+    modules: [ 'node_modules', './src' ],
+    extensions: [ '.js', '.jsx' ],
   },
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-        options: {
-          // eslint options (if necessary)
-        },
-      },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
@@ -41,6 +33,11 @@ module.exports = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [ 'babel-loader', 'eslint-loader' ],
       },
     ],
   },
