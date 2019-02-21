@@ -10,7 +10,7 @@ Toastfy is simple toast notification library.
 
 **Contributing**: Pull requests are welcome!
 
-+ Read [CONTRIBUTING.md]() and check out our bite-sized and help-wanted issues
++ Read [CONTRIBUTING.md](https://github.com/ebubekirtabak/react-toastfy/blob/master/CONTRIBUTING.md) and check out our bite-sized and help-wanted issues
 
 + Submit github issues for any feature enhancements, bugs or documentation problems
 
