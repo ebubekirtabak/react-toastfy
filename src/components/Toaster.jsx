@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import SimpleToast from './toasts/SimpleToast';
 import { addSimpleToast } from '../store/actions';
 
@@ -7,7 +6,7 @@ export default class Toaster extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { numbers: [1, 2, 3, 4, 5] };
+    this.state = { numbers: [ 1, 2, 3, 4, 5 ] };
   }
 
   render () {

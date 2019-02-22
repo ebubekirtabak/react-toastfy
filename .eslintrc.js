@@ -46,6 +46,7 @@ module.exports = {
     "no-param-reassign": [ 1 ],
     "no-shadow": [ 1 ],
     "camelcase": [ 1 ],
+    "no-console": ["warn", { allow: ["warn"] }],
     "no-underscore-dangle" : [0, "always"],
   },
 };

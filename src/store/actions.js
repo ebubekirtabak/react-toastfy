@@ -1,6 +1,6 @@
 import { ADD_SIMPLE_TOAST, CLEAR_SIMPLE_TOAST } from './actionTypes';
 
-export	function	addSimpleToast(title){
+export function addSimpleToast(title){
 	return { type: ADD_SIMPLE_TOAST, title };
 }
 
