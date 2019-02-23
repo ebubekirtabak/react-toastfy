@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SimpleToast from './toasts/SimpleToast';
-import { addSimpleToast } from '../store/actions';
 
 export default class Toaster extends Component {
 
@@ -23,12 +22,15 @@ export default class Toaster extends Component {
 
   componentDidMount () {
     console.log('onload');
-    addSimpleToast(' test message ');
   }
 
   appendToast() {
     this.setState(state => ({
-      numbers: [...state.numbers, 12]
+      numbers: [ ...state.numbers, 12 ]
     }));
+  }
+
+  componentWillUnmount() {
+
   }
 }
