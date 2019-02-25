@@ -15,8 +15,8 @@ class Toaster extends Component {
     return (
         <div className="toast-container tr">
             <div className="toast-container__content">
-                { this.props.toasts.map((toast) =>
-                    <SimpleToast key={ toast.id } />
+                { this.props.toasts.map((toastItem) =>
+                    <SimpleToast key={ toastItem.id } toast={ toastItem } />
                 )}
             </div>
         </div>
