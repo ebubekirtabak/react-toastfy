@@ -6,6 +6,7 @@ function toasts(state = [], action) {
 		case ADD_SIMPLE_TOAST:
 			return [ ...state,
 				{
+					id: action.id,
 					title: action.title,
 					completed: false,
 				},
