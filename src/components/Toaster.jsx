@@ -6,29 +6,28 @@ class Toaster extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { numbers: [ 1, 2, 3, 4, 5 ] };
+    this.state = { toasts: [
+        { id: 12, title: 'tesadsa' }
+      ] };
   }
 
   render () {
     return (
         <div className="toast-container tr">
             <div className="toast-container__content">
-                {this.state.numbers.map((number) =>
-                    <SimpleToast key={ number } />
+                { this.props.toasts.map((toast) =>
+                    <SimpleToast key={ toast.id } />
                 )}
             </div>
         </div>
     );
   }
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log({ prevProps, prevState, snapshot });
+  }
 
   componentDidMount () {
     console.log('onload');
-  }
-
-  appendToast() {
-    this.setState(state => ({
-      numbers: [ ...state.numbers, 12 ]
-    }));
   }
 
   componentWillUnmount() {
