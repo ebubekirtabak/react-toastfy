@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import SimpleToast from './toasts/SimpleToast';
 
-export default class Toaster extends Component {
+class Toaster extends Component {
 
   constructor(props) {
     super(props);
@@ -34,3 +35,13 @@ export default class Toaster extends Component {
 
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    toasts: state.toasts
+  }
+};
+
+export default connect(
+    mapStateToProps
+)(Toaster)
