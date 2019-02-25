@@ -8,11 +8,9 @@ import { addSimpleToast } from './store/actions';
 
 const store = createStore(toastApp);
 store.dispatch(addSimpleToast(12, 'Test'));
-setInterval(() => {
-    const id = Math.floor(Math.random() * 24234234);
-    store.dispatch(addSimpleToast(id, 'Test => ' + id ));
-    store.getState();
-}, 1000);
+const id = Math.floor(Math.random() * 24234234);
+store.dispatch(addSimpleToast(id, 'Test => ' + id ));
+store.getState();
 render(
     <Provider store={ store }>
         <App />
