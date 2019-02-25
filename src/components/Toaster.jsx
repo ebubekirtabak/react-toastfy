@@ -10,13 +10,13 @@ export default class Toaster extends Component {
 
   render () {
     return (
-      <div className="toast-container tr">
-        <div className="toast-container__content">
-          {this.state.numbers.map((number) =>
-            <SimpleToast key={number} />
-          )}
+        <div className="toast-container tr">
+            <div className="toast-container__content">
+                {this.state.numbers.map((number) =>
+                    <SimpleToast key={ number } />
+                )}
+            </div>
         </div>
-      </div>
     );
   }
 
