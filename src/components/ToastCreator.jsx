@@ -47,7 +47,7 @@ class ToastCreator extends Component {
     handleSubmit(event) {
         event.preventDefault();
         const id = Math.floor(Math.random() * 24234234);
-        this.props.addSimpleToast(id, 'Test => ' + id );
+        this.props.addSimpleToast({ id: id, message: this.state.message, title: this.state.title });
     }
 }
 

@@ -8,12 +8,12 @@ export default class SimpleToast extends Component {
 
     render () {
         return (
-            <div className="simple-toast rounded">
+            <div className={ `simple-toast ${ this.props.toast.class || {} }` }>
                 <div className="simple-toast__title">
                     { this.props.toast.title }
                 </div>
                 <div className="simple-toast__message">
-                Lorem ipsum message text.
+                    { this.props.toast.message || {} }
                 </div>
                 <div className="simple-toast__icon">
                 </div>
