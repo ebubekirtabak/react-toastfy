@@ -7,6 +7,10 @@ function toasts(state = [], action) {
 			return [ ...state,
 				action.toast
 			];
+		case TOAST_ON_DESTROY:
+			return [ ...state,
+				action.toast
+			];
 		case CLEAR_SIMPLE_TOAST:
 			return state.map((toast, id) => {
 				if (id === action.id) {
