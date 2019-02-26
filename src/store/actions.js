@@ -10,8 +10,8 @@ export function addSimpleToast(toast) {
 	return { type: ADD_SIMPLE_TOAST, toast };
 }
 
-export toastOnDestrOy(toast) {
-	return { type: TOAST_ON_DESTROY, toast}
+export function toastOnDestroy(toast) {
+	return { type: TOAST_ON_DESTROY, toast }
 }
 
 export function clearSimpleToast(id) {

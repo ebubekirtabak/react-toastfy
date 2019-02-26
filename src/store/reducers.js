@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { ADD_SIMPLE_TOAST, CLEAR_SIMPLE_TOAST } from './actionTypes';
+import { ADD_SIMPLE_TOAST, CLEAR_SIMPLE_TOAST, TOAST_ON_DESTROY } from './actionTypes';
 
 function toasts(state = [], action) {
 	switch (action.type) {
