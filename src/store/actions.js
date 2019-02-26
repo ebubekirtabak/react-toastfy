@@ -5,8 +5,8 @@ import {
 	TOAST_DENY_ACTION
 } from './actionTypes';
 
-export function addSimpleToast(id, title) {
-	return { type: ADD_SIMPLE_TOAST, id, title };
+export function addSimpleToast(toast) {
+	return { type: ADD_SIMPLE_TOAST, toast };
 }
 
 export function clearSimpleToast(id) {

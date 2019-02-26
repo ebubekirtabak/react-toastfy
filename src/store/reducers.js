@@ -5,11 +5,7 @@ function toasts(state = [], action) {
 	switch (action.type) {
 		case ADD_SIMPLE_TOAST:
 			return [ ...state,
-				{
-					id: action.id,
-					title: action.title,
-					completed: false,
-				},
+				action.toast
 			];
 		case CLEAR_SIMPLE_TOAST:
 			return state.map((toast, id) => {
