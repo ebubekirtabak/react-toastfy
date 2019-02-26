@@ -14,20 +14,14 @@ export function toastOnDestroy(toast) {
 	return { type: TOAST_ON_DESTROY, toast }
 }
 
-export function clearSimpleToast(id) {
-	return { type: CLEAR_SIMPLE_TOAST, id };
+export function clearSimpleToast(toast) {
+	return { type: CLEAR_SIMPLE_TOAST, toast };
 }
 
-export function toastOkayAction(id) {
-	return { type: TOAST_OKAY_ACTION, id };
+export function toastOkayAction(toast) {
+	return { type: TOAST_OKAY_ACTION, toast };
 }
 
-export function toastDenyAction(id) {
-	return { type: TOAST_DENY_ACTION, id };
+export function toastDenyAction(toast) {
+	return { type: TOAST_DENY_ACTION, toast };
 }
-
-/*
-  const addSimpleToast = title => dispatch(addSimpleToast(title))
-  const clearSimpleToast = title => dispatch(clearSimpleToast(title))
-  addSimpleToast(title)
-*/
