@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { ADD_SIMPLE_TOAST, CLEAR_SIMPLE_TOAST, TOAST_ON_DESTROY } from './actionTypes';
+import { ADD_SIMPLE_TOAST, CLEAR_SIMPLE_TOAST, TOAST_ON_CLEAR_ACTION, TOAST_ON_DESTROY } from './actionTypes';
 
 function toasts(state = [], action) {
 	switch (action.type) {
@@ -11,6 +11,10 @@ function toasts(state = [], action) {
 			return [ ...state,
 				action.toast
 			];
+        case TOAST_ON_CLEAR_ACTION:
+            return [ ...state,
+                action.toast
+            ];
 		case CLEAR_SIMPLE_TOAST:
 			return state.map((toast, id) => {
 				if (id === action.id) {
