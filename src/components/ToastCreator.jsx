@@ -48,11 +48,11 @@ class ToastCreator extends Component {
         event.preventDefault();
         const id = Math.floor(Math.random() * 24234234);
         this.props.addSimpleToast({
-					 id: id,
-					 message: this.state.message,
-					 title: this.state.title,
-					 class: 'rounded'
-				});
+            id: id,
+            message: this.state.message,
+            title: this.state.title,
+            class: 'rounded'
+        });
     }
 }
 
