@@ -1,13 +1,18 @@
 import {
-	ADD_SIMPLE_TOAST,
-	CLEAR_SIMPLE_TOAST,
-	TOAST_OKAY_ACTION,
-	TOAST_DENY_ACTION,
-	TOAST_ON_DESTROY
+    ADD_SIMPLE_TOAST,
+    CLEAR_SIMPLE_TOAST,
+    TOAST_OKAY_ACTION,
+    TOAST_DENY_ACTION,
+    TOAST_ON_DESTROY,
+    TOAST_ON_CLEAR_ACTION
 } from './actionTypes';
 
 export function addSimpleToast(toast) {
 	return { type: ADD_SIMPLE_TOAST, toast };
+}
+
+export function toastOnClearAction(toast) {
+    return { type: TOAST_ON_CLEAR_ACTION, toast };
 }
 
 export function toastOnDestroy(toast) {
